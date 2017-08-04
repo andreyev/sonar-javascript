@@ -1,0 +1,9 @@
+{
+  "title": "Track s matching a regular expression",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "tags": [
+    
+  ],
+  "defaultSeverity": "Major"
+}
