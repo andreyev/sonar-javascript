@@ -75,7 +75,7 @@ public class RegularExpressionCheck extends SubscriptionVisitorCheck {
     if (pattern != null) {
       SyntaxToken token = (SyntaxToken) tree;
       for (SyntaxTrivia trivia : token.trivias()) {
-        if (pattern.matcher(trivia.text()).matches()) {
+        if (pattern.matcher(trivia.code()).matches()) {
           addIssue(new LineIssue(this, trivia.line(), message));
         }
       }

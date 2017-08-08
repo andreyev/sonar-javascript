@@ -31,6 +31,7 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitor;
 public class InternalSyntaxTrivia extends JavaScriptTree implements SyntaxTrivia {
 
   private final String comment;
+  private String code;
   private final int column;
   private int startLine;
   private int endLine;
@@ -62,6 +63,10 @@ public class InternalSyntaxTrivia extends JavaScriptTree implements SyntaxTrivia
   @Override
   public int endColumn() {
     return endColumn;
+  }
+
+  public String code() {
+    return code;
   }
 
   @Override
