@@ -73,7 +73,7 @@ public class InternalSyntaxToken extends JavaScriptTree implements SyntaxToken {
     return startIndex + value.length();
   }
 
-  public String code() {
+  public String getCodeBody() {
     return value;
   }
 

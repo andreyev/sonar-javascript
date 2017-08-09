@@ -31,7 +31,7 @@ public interface SyntaxToken extends Tree {
 
   String text();
 
-  String code();
+  String getCodeBody();
 
   List<SyntaxTrivia> trivias();
 
