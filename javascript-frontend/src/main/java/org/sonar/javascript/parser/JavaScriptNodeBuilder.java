@@ -79,7 +79,7 @@ public class JavaScriptNodeBuilder implements NodeBuilder {
     for (Trivia trivia : trivias) {
       Token trivialToken = trivia.getToken();
       int column = column(hasByteOrderMark, trivialToken.getLine(), trivialToken.getColumn());
-      result.add(InternalSyntaxTrivia.create(trivialToken.getValue(), trivialToken.getLine(), column));
+      boolean add = result.add(InternalSyntaxTrivia.create(trivialToken.getValue(), trivialToken.getOriginalValue() ,trivialToken.getLine(), column));
     }
     return result;
   }

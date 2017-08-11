@@ -31,15 +31,16 @@ import org.sonar.plugins.javascript.api.visitors.DoubleDispatchVisitor;
 public class InternalSyntaxTrivia extends JavaScriptTree implements SyntaxTrivia {
 
   private final String comment;
-  private String getCodeBody;
+  private final String getCodeBody;
   private final int column;
   private int startLine;
   private int endLine;
   private int endColumn;
 
 
-  public InternalSyntaxTrivia(String comment, int startLine, int column) {
+  public InternalSyntaxTrivia(String comment, String getCodeBody, int startLine, int column) {
     this.comment = comment;
+    this.getCodeBody = getCodeBody;
     this.startLine = startLine;
     this.column = column;
     calculateEndOffsets();
@@ -105,8 +106,8 @@ public class InternalSyntaxTrivia extends JavaScriptTree implements SyntaxTrivia
     throw new UnsupportedOperationException();
   }
 
-  public static SyntaxTrivia create(String comment, int startLine, int column) {
-    return new InternalSyntaxTrivia(comment, startLine, column);
+  public static SyntaxTrivia create(String comment, String getCodeBody, int startLine, int column) {
+    return new InternalSyntaxTrivia(comment, getCodeBody, startLine, column);
   }
 
   @Override
