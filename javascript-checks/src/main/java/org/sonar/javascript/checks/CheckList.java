@@ -124,6 +124,7 @@ public final class CheckList {
       InstanceofInMisuseCheck.class,
       InvariantReturnCheck.class,
       JQueryVarNameConventionCheck.class,
+      JavaScriptRegexCheck.class,
       JumpStatementInFinallyCheck.class,
       LabelledStatementCheck.class,
       LabelPlacementCheck.class,

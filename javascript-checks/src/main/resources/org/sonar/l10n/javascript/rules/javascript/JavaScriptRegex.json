@@ -1,0 +1,11 @@
+{
+  "name": "JavaScriptRegexCheck",
+  "description": "JavaScriptRegexCheck",
+  "title": "JavaScriptRegexCheck",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "tags": [
+    
+  ],
+  "defaultSeverity": "Major"
+}
